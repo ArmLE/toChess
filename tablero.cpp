@@ -8,6 +8,11 @@ Tablero::Tablero(QWidget *parent) :
     //setRect(0,0,100,100);
     ui->setupUi(this);
 
+    //ui->Tablero
+
+    /*
+
+*/
 }
 
 Tablero::~Tablero()

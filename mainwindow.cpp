@@ -9,6 +9,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     //ui->TableroWidget->se
 
+
+    /*
+    ui->CapBlackWidget
+
+    ui->CapWhiteWidget*/
+
 }
 
 MainWindow::~MainWindow()
