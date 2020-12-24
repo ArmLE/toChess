@@ -6,19 +6,15 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    //ui->TableroWidget->se
-
-
-    /*
-    ui->CapBlackWidget
-
-    ui->CapWhiteWidget*/
-
+    //boardIcon.load("./af1.png");
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
+/*
+void MainWindow::paintEvent(QPaintEvent *event){
+    QPainter painter(this);
+    painter.drawPixmap(0,0,width(),height(),boardIcon);
+}*/

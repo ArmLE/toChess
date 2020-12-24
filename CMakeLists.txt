@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(toChessCmake LANGUAGES CXX)
+project(toChess LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -8,7 +8,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 file(GLOB files "*.h" "*.cpp")
@@ -28,21 +28,24 @@ file(GLOB files "*.h" "*.cpp")
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 if(ANDROID)
-  add_library(toChessCmake SHARED
+  add_library(toChess SHARED
     main.cpp
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    imagenes.qrc
   )
 else()
-  add_executable(toChessCmake
+  add_executable(toChess
     main.cpp
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    tablero.ui
+    imagenes.qrc
+    Board.ui
     ${files}
+
   )
 endif()
 
-target_link_libraries(toChessCmake PRIVATE Qt5::Widgets)
+target_link_libraries(toChess PRIVATE Qt5::Widgets)
